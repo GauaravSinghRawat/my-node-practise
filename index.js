@@ -24,4 +24,6 @@ app.get("/", (req,res)=>{
 app.use(notFound)
 app.use(errorHandlerMiddleware)
 
-app.listen(8000, ()=>console.log("running on port 8000"))    
+const port =  process.env.PORT || 8000
+
+app.listen(port, ()=>console.log("running on port 8000"))    
